@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>/ascii/</title>
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+				width: 800px;
+				margin: 0 auto;
+				padding: 10px;
+			}
+			input[type="text"] {
+				margin: 10px 0;
+			}
+			textarea {
+				width: 400px;
+				height: 200px;
+			}
+			hr {
+				border-top: 3px double #8c8b8b;
+			}
+			.art {
+				font-weight: bold;
+			}
+			.error {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post">
+			<h1>/ascii/</h1>
+			<label> 
+				<div class="art">Title</div>
+				<input type="text" name="title" value="{{title}}">
+			</label>
+			<br>
+			<label>
+				<div class="art">Art</div>
+				<textarea name="art">{{art}}</textarea>
+			</label>
+			<br>
+			<div class="error">{{error}}</div>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+		{% if arts %}
+		<hr>
+			{% for item in arts %}
+				<div>
+					<div>{{item.title}}</div>
+					<pre>{{item.art}}</pre>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</body>
+</html>
