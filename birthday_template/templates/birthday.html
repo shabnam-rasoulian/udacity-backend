@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	<meta name="viewport" cotent="width=device-width, initial-scale=1.0">
+        <title>Birthday</title>
+    </head>
+    <body>
+        <form method="post">
+            <h1>What is your birthday?</h1>
+            <label> Month
+		    <input type="text" name="month" value="{{month}}">
+            </label>
+            <label> Day
+		    <input type="text" name="day" value="{{day}}">
+            </label>
+            <label> Year
+		    <input type="text" name="year" value="{{year}}">
+            </label>
+            <br><br>
+	    <div style="color: red">{{error}}</div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
