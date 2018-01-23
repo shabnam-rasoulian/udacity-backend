@@ -1,0 +1,13 @@
+{% extends "base_blog.html" %}
+{% block content %}
+{% if posts %}
+	{% for item in posts %}
+		<div class="container">
+			<div class="subject">{{item.subject}}</div>
+			<div class="date">{{item.created.strftime("%B %d, %Y")}}</div>
+			<hr>
+			<div class="content">{{item.content}}</div>
+		</div>
+	{% endfor %}
+{% endif %}
+{% endblock %}
