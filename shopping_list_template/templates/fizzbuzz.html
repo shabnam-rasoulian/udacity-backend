@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FizzBuzz</title>
+	</head>
+	<body>
+		<h1>Fizz Buzz:</h2>
+		{% if n %}
+		<ol>
+			{% for i in range(1, n + 1) %}
+			<li>
+				{% if i % 15 == 0 %}
+					FizzBuzz
+				{% elif i % 3 == 0 %}
+					Fizz
+				{% elif i % 5 == 0%}
+					Buzz
+				{% else %}
+					{{i}}
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ol>
+		{% endif %}
+	</body>
+</html>
